@@ -32,7 +32,19 @@ class ConfirmationDialog {
     this.#addModalButtons(this.yes, "yes-button", this.handleChoice);
     this.#addModalButtons(this.cancel, "cancel-button", this.handleChoice);
   };
-
+  handleChoice = () => {
+    let displayMessage = document.getElementById("display-message");
+    displayMessage.innerHTML = `You just clicked "${event.target.innerHTML}".`;
+    this.#removeDialogContent(this.#modalBox, this.#overlay);
+  };
+  
+  #removeDialogContent = (node, overlayNode) => {
+    while (node.lastChild) {
+      node.removeChild(node.lastChild);
+    }
+    document.body.removeChild(node);
+    document.body.removeChild(overlayNode);
+  };
 }
 
 const firstDialog = new ConfirmationDialog("Are you there?");
