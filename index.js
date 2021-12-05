@@ -13,6 +13,15 @@ class ConfirmationDialog {
     modalBoxText.innerHTML = text;
     this.#modalBox.appendChild(modalBoxText);
   };
+
+  #addModalButtons = (text, idName, clickFunction) => {
+    let modalBoxButton = document.createElement("button");
+    modalBoxButton.innerHTML = text;
+    modalBoxButton.id = idName;
+    modalBoxButton.onclick = clickFunction;
+    this.#modalBox.appendChild(modalBoxButton);
+  };
+
 }
 
 const firstDialog = new ConfirmationDialog("Are you there?");
