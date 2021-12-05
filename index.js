@@ -22,6 +22,17 @@ class ConfirmationDialog {
     this.#modalBox.appendChild(modalBoxButton);
   };
 
+  showDialog = () => {
+    document.body.appendChild(this.#modalBox);
+    this.#overlay.id = "overlay";
+    document.body.appendChild(this.#overlay);
+    this.#modalBox.id = "modal-box";
+    this.#modalBox.style.display = "block";
+    this.#addModalText(this.message);
+    this.#addModalButtons(this.yes, "yes-button", this.handleChoice);
+    this.#addModalButtons(this.cancel, "cancel-button", this.handleChoice);
+  };
+
 }
 
 const firstDialog = new ConfirmationDialog("Are you there?");
