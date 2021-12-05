@@ -37,7 +37,7 @@ class ConfirmationDialog {
     displayMessage.innerHTML = `You just clicked "${event.target.innerHTML}".`;
     this.#removeDialogContent(this.#modalBox, this.#overlay);
   };
-  
+
   #removeDialogContent = (node, overlayNode) => {
     while (node.lastChild) {
       node.removeChild(node.lastChild);
@@ -53,4 +53,3 @@ const secondDialog = new ConfirmationDialog(
   "Hell Yeah",
   "Not so Much"
 );
-console.log(firstDialog);
