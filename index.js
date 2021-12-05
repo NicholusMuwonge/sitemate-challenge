@@ -7,6 +7,12 @@ class ConfirmationDialog {
     this.yes = yes;
     this.cancel = cancel;
   }
+
+  #addModalText = (text) => {
+    let modalBoxText = document.createElement("p");
+    modalBoxText.innerHTML = text;
+    this.#modalBox.appendChild(modalBoxText);
+  };
 }
 
 const firstDialog = new ConfirmationDialog("Are you there?");
