@@ -1,5 +1,15 @@
-body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    justify-content: center;
-    align-items: center;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#dialog-toggle{
+  margin: 2% 2% 2% 2%;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid grey;
+}
+
+#display-message{
+  margin-left: 2%;
 }
