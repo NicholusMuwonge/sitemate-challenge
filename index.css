@@ -1,15 +1,66 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+  background: #f2f2f2;
 }
 
-#dialog-toggle{
+#dialog-toggle {
   margin: 2% 2% 2% 2%;
   padding: 5px;
   background-color: #fff;
   border: 1px solid grey;
 }
 
-#display-message{
+#display-message {
   margin-left: 2%;
+}
+
+#modal-box {
+  margin-left: 25%;
+  border-radius: 4px;
+  background: #f8f8f8;
+  color: #39342d;
+  box-shadow: inset 0 1px 0 #fff, 0 1px 3px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 50%;
+  align-self: center;
+  position: absolute;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+#overlay {
+  padding: 0;
+  margin: 0;
+  background: rgba(5, 5, 5, 0.4);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+#yes-button {
+  background-color: green;
+  color: #fff;
+  border: 0;
+  padding: 1%;
+}
+
+#cancel-button {
+  background-color: red;
+  color: #fff;
+  border: 0;
+  padding: 1%;
+}
+
+p {
+  padding: 5%;
+  text-align: center;
 }
